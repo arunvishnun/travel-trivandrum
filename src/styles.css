@@ -2,6 +2,12 @@ body, html {
   font-family: 'Didact Gothic', sans-serif;
   font-size: 20px;
 }
+
+.navbar {
+  margin-bottom: 0;
+  border-radius: 0;
+}
+
 img {
 	width: 100%;
 }
@@ -15,6 +21,7 @@ figure {
 	cursor: pointer;
 	overflow: hidden;
 	border: 3px solid #fff;
+
 }
 
 figure:hover figcaption {
@@ -64,6 +71,7 @@ figure:hover img {
 	-o-transform: scale(1.1);
 	-ms-transform: scale(1.1);
 	transform: scale(1.1);
+  filter: blur(2px);
 }
 
 figcaption h3 {
@@ -105,7 +113,6 @@ figcaption a:hover {
 }
 
 footer {
-  background: #f9f9f9;
-  border-top: 1px solid #f5f5f5;
-  min-height: 24px;
+  background-color: #f2f2f2;
+  padding: 25px;
 }
