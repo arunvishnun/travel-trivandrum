@@ -3,11 +3,25 @@ body, html {
   font-size: 20px;
 }
 
-.navbar {
-  margin-bottom: 0;
-  border-radius: 0;
+/*Carousel*/
+.carousel {
+  background-color: #4285f4;
+  box-shadow: 0 0 4px rgba(0,0,0,.14), 0 4px 8px rgba(0,0,0,.28);
 }
 
+/*
+buttons
+*/
+.btn-primary {
+  background-color: #4285f4;
+}
+.btn-primary:hover {
+  background-color: #4285d8;
+}
+
+/*
+Home page images and figcaptions
+*/
 img {
 	width: 100%;
 }
@@ -38,8 +52,8 @@ figcaption {
 	position: absolute;
 	height: 100%;
 	width: 100%;
-	background: rgba(0,0,0,.5);
-	color: #fff;
+	background: rgba(200, 200, 244,.5);
+	color: #01255e;
 	-webkit-transition: all .9s ease;
 	-moz-transition: all .9s ease;
 	-o-transition: all .9s ease;
@@ -76,14 +90,14 @@ figure:hover img {
 
 figcaption h3 {
 	font-family: 'Open sans';
-	font-weight: 400;
-	color: #f3b204;
+	font-weight: 600;
+	color: #01255e;
 	/*padding: 10px 20px;*/
 	margin-bottom: 0;
 	position: relative;
 	righ: 100%;
 	/*margin-top: 37px;*/
-	font-size: 30px;
+	font-size: 35px;
 }
 
 figcaption p {
@@ -93,7 +107,7 @@ figcaption p {
 	margin-top: 20px;
 	position: relative;
 	left: 100%;
-	font-size: 13px;
+	font-size: 16px;
 }
 
 figure:hover h3,figure:hover p {
@@ -115,4 +129,114 @@ figcaption a:hover {
 footer {
   background-color: #f2f2f2;
   padding: 25px;
+}
+
+/*
+Menu navigation
+*/
+
+.nav-top {
+    position: fixed;
+    z-index: 6;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(66, 133, 244, 0.6);
+    height: 65px;
+}
+
+.nav-top .wrapper {
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+}
+
+.logo-nav-top {
+    float: left;
+    overflow: hidden;
+}
+
+.nav-top a {
+  color: #fff;
+  font-family: 'Allerta Stencil', sans-serif;
+  font-size: 35px;
+  text-decoration: none;
+}
+
+.nav-top .list-horizontal {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+
+.nav-top .list-horizontal li {
+  margin: 0px 12px;
+}
+
+.nav-main {
+    position: fixed;
+    z-index: 300;
+    top: 65px;
+    width: auto;
+    left: 0;
+    right: 0;
+    background: white;
+    overflow: visible;
+    box-shadow: 0 0 40px rgba(0,0,0,.2), 0 4px 8px rgba(0,0,0,.3);
+
+}
+
+.nav-main .wrapper {
+  position: relative;
+}
+
+.nav-main .menu-main {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px;
+  margin: 0;
+
+}
+
+.menu-main .menu-item a {
+  text-decoration: none;
+  color: #212121;
+}
+
+.menu-main .menu-item {
+  display: table-cell;
+  padding-left: 16px;
+}
+
+.menu-main .menu-item:hover {
+  background-color: #4285f4;
+}
+
+.menu-main .menu-item:hover a{
+  color: #fff;
+}
+
+.menu-main .menu-item:not(:first-child) {
+  border-left: 1px solid #ddd;
+}
+
+.menu-main .menu-item a h3 {
+  font-weight: bold;
+}
+
+
+@media (min-width: 640px) {
+  .wrapper {
+      padding: 0 20px;
+      width: 100%;
+      margin: 0 auto 0;
+      max-width: 1200px;
+  }
+  .wrapper {
+      position: relative;
+      padding: 0;
+  }
 }
