@@ -1,0 +1,8 @@
+i[class^=icon-]:before {
+    display: inline-block;
+    text-decoration: none;
+}
+
+.icon-search:before {
+    content: "";
+}
