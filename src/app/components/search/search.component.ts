@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import {DomSanitizer} from '@angular/platform-browser';
+
 
 @Component({
   selector: 'search',
@@ -7,6 +9,10 @@ import { Component } from '@angular/core';
 })
 export class SearchComponent {
   title = 'Search';
-
+  // constructor(iconRegistry: MdIconRegistry, sanitizer: DomSanitizer) {
+  //   iconRegistry.addSvgIcon(
+  //       'thumbs-up',
+  //       sanitizer.bypassSecurityTrustResourceUrl('assets/img/examples/thumbup-icon.svg'));
+  // }
 
 }
