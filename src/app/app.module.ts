@@ -1,89 +1,54 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
+
 import { FormsModule } from '@angular/forms';
-import { FlexLayoutModule } from "@angular/flex-layout";
+import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
-import { CarouselComponent } from './components/carousel/carousel.component';
-import { NavigationComponent } from './components/navigation/navigation.component';
-import { SearchComponent } from './components/search/search.component';
-import {
-  MdAutocompleteModule,
-  MdButtonModule,
-  MdButtonToggleModule,
-  MdCardModule,
-  MdCheckboxModule,
-  MdChipsModule,
-  MdCoreModule,
-  MdDatepickerModule,
-  MdDialogModule,
-  MdExpansionModule,
-  MdGridListModule,
-  MdIconModule,
-  MdInputModule,
-  MdListModule,
-  MdMenuModule,
-  MdNativeDateModule,
-  MdPaginatorModule,
-  MdProgressBarModule,
-  MdProgressSpinnerModule,
-  MdRadioModule,
-  MdRippleModule,
-  MdSelectModule,
-  MdSidenavModule,
-  MdSliderModule,
-  MdSlideToggleModule,
-  MdSnackBarModule,
-  MdSortModule,
-  MdTableModule,
-  MdTabsModule,
-  MdToolbarModule,
-  MdTooltipModule,
-} from '@angular/material';
+import { MDBBootstrapModule } from './typescripts/angular-bootstrap-md/free';
+import { AgmCoreModule } from '@agm/core';
+
+
+import { NavigationComponent } from './navigation/navigation.component';
+import { CarouselComponent } from './carousel/carousel.component';
+import { PlacesToSeeComponent } from './places-to-see/places-to-see.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+
+
+const appRoutes: Routes = [
+  { path: 'home', component: AppComponent },
+  { path: 'places-to-see', component: PlacesToSeeComponent },
+  { path: '',
+    redirectTo: '/home',
+    pathMatch: 'full'
+  },
+  { path: '**', component: PageNotFoundComponent }
+];
+
 @NgModule({
   declarations: [
     AppComponent,
-    CarouselComponent,
     NavigationComponent,
-    SearchComponent
+    CarouselComponent,
+    PlacesToSeeComponent,
+    PageNotFoundComponent
+
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     FormsModule,
-    MdAutocompleteModule,
-    MdButtonModule,
-    MdButtonToggleModule,
-    MdCardModule,
-    MdCheckboxModule,
-    MdChipsModule,
-    MdCoreModule,
-    MdDatepickerModule,
-    MdDialogModule,
-    MdExpansionModule,
-    MdGridListModule,
-    MdIconModule,
-    MdInputModule,
-    MdListModule,
-    MdMenuModule,
-    MdNativeDateModule,
-    MdPaginatorModule,
-    MdProgressBarModule,
-    MdProgressSpinnerModule,
-    MdRadioModule,
-    MdRippleModule,
-    MdSelectModule,
-    MdSidenavModule,
-    MdSliderModule,
-    MdSlideToggleModule,
-    MdSnackBarModule,
-    MdSortModule,
-    MdTableModule,
-    MdTabsModule,
-    MdToolbarModule,
-    MdTooltipModule,
-    FlexLayoutModule
+    HttpModule,
+    MDBBootstrapModule.forRoot(),
+    RouterModule.forRoot(
+      appRoutes,
+      { enableTracing: true } // <-- debugging purposes only
+    ),
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [NO_ERRORS_SCHEMA]
 })
 export class AppModule { }
