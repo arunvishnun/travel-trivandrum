@@ -1,0 +1,63 @@
+<!--Navbar-->
+<navbar SideClass="navbar navbar-expand-lg navbar-dark rgba-indigo-strong fixed-top " [containerInside]="true" >
+    <!-- Navbar brand -->
+    <logo><a class="navbar-brand" routerLink="/home">Explore Trivandrum</a></logo>
+    <!-- Collapsible content -->
+    <links class="justify-content-end">
+
+        <!-- Search form -->
+        <form class="form-inline  waves-light" ripple-radius>
+            <input class="form-control mr-sm-2 search" type="text" placeholder="Search">
+            <i class="fa fa-search" aria-hidden="true"></i>
+        </form>
+        <!-- social links -->
+        <ul class="navbar-nav nav-flex-icons social-links">
+            <li class="nav-item" ripple-radius>
+                <a class="nav-link" href="https://www.facebook.com/keralatourismofficial"><i class="fa fa-facebook"></i></a>
+            </li>
+            <li class="nav-item" ripple-radius>
+                <a class="nav-link" href="https://www.youtube.com/user/keralatourism"><i class="fa fa-youtube"></i></a>
+            </li>
+
+            <li class="nav-item" ripple-radius>
+                <a class="nav-link" *ngIf="!auth.isAuthenticated()" (click)="auth.login()"><i class="fa fa-sign-in" aria-hidden="true"></i>Log in</a>
+                <a class="nav-link" *ngIf="auth.isAuthenticated()" (click)="auth.logout()"><i class="fa fa-sign-out" aria-hidden="true"></i>Log out</a>
+            </li>
+        </ul>
+        <!-- /social links -->
+    </links>
+    <br />
+    <navbar SideClass="navbar navbar-expand-lg navbar-light grey lighten-5 fixed-secondary-nav " [containerInside]="true">
+        <links>
+          <ul class="navbar-nav mr-auto">
+              <li class="nav-item hoverable" ripple-radius  routerLink="/places-to-see" routerLinkActive="active">
+                  <a class="nav-link waves-light"   >
+                    <h3>DO & SEE</h3>
+                    <h4>Museum, Zoo, Beaches etc...</h4>
+                  </a>
+              </li>
+              <li class="nav-item hoverable" ripple-radius routerLink="/places-to-stay" routerLinkActive="active">
+                  <a class="nav-link waves-light">
+                    <h3>SLEEP</h3>
+                    <h4>Find best Hotels and Resorts...</h4>
+                  </a>
+              </li>
+
+              <li class="nav-item hoverable" ripple-radius routerLink="/places-to-eat-out" routerLinkActive="active">
+                  <a class="nav-link waves-light">
+                    <h3>EAT & DRINK</h3>
+                    <h4>Explore Restaurants, Dine out, party places near...</h4>
+                  </a>
+              </li>
+              <li class="nav-item hoverable" ripple-radius routerLink="/tourism-guides" routerLinkActive="active">
+                  <a class="nav-link waves-light">
+                    <h3>Essentials</h3>
+                    <h4>Get tourism information...</h4>
+                  </a>
+              </li>
+          </ul>
+        </links>
+        <!-- Collapsible content -->
+    </navbar>
+</navbar>
+<!--/.Navbar-->
