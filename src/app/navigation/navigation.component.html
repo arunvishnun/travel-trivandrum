@@ -4,7 +4,33 @@
     <logo><a class="navbar-brand" routerLink="/home">Explore Trivandrum</a></logo>
     <!-- Collapsible content -->
     <links class="justify-content-end">
+      <ul class="navbar-nav mr-auto navbar-mobile">
+          <li class="nav-item hoverable" ripple-radius  routerLink="/places-to-see" routerLinkActive="active">
+              <a class="nav-link waves-light"   >
+                <h3>DO & SEE</h3>
+                <h4>Museum, Zoo, Beaches etc...</h4>
+              </a>
+          </li>
+          <li class="nav-item hoverable" ripple-radius routerLink="/places-to-stay" routerLinkActive="active">
+              <a class="nav-link waves-light">
+                <h3>SLEEP</h3>
+                <h4>Find best Hotels and Resorts...</h4>
+              </a>
+          </li>
 
+          <li class="nav-item hoverable" ripple-radius routerLink="/places-to-eat-out" routerLinkActive="active">
+              <a class="nav-link waves-light">
+                <h3>EAT & DRINK</h3>
+                <h4>Explore Restaurants, Dine out, party places near...</h4>
+              </a>
+          </li>
+          <li class="nav-item hoverable" ripple-radius routerLink="/tourism-guides" routerLinkActive="active">
+              <a class="nav-link waves-light">
+                <h3>Essentials</h3>
+                <h4>Get tourism information...</h4>
+              </a>
+          </li>
+      </ul>
         <!-- Search form -->
         <form class="form-inline  waves-light" ripple-radius>
             <input class="form-control mr-sm-2 search" type="text" placeholder="Search">
